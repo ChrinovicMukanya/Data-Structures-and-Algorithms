@@ -1,4 +1,0 @@
-#inlcude <stdio>\
-et 
-e
-
