@@ -18,7 +18,7 @@ int main()
 
 	int searchValue;
 	printf("Insert Search Value : \n");
-	scanf(
+	scanf("%d", &searchValue);
 
 	int result = linearSearch(array, length, searchValue);
 	printf("%d\n", result);
