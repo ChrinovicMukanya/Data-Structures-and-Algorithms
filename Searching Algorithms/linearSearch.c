@@ -17,7 +17,7 @@ int main()
 	int length = sizeof(array) / sizeof(array[0]); //get length of array
 
 	int searchValue;
-	printf(
+	printf("Insert Search 
 
 	int result = linearSearch(array, length, searchValue);
 	printf("%d\n", result);
