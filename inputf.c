@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int input(char str[], int n){
-	char _char;
+int input(char str[], int n){// Takes in emppty char array, and length
+	char _char;//Character in string  
 	int x;
 
 	while((_char = getchar()) != '\n'){
