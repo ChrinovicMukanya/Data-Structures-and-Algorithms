@@ -6,8 +6,8 @@ int input(char str[], int n){// Takes in emppty char array, and length
 
 	while((_char = getchar()) != '\n'){
 		if ( x < n){
-			str[x] = _char;
-			++x;
+			str[x] = _char; //Sets index with each character given 
+			++x;//increments index 
 		}
 	}str[x] = '\0';
 	return x;
