@@ -11,6 +11,8 @@ void recuriveLoop(int array[], int num, int array_length){
         recuriveLoop( array, num + 1, array_length);
     }
 }
+
+//Iterative Function
 void iterativeLoop(int array[], int array_length){
     
     int x;
