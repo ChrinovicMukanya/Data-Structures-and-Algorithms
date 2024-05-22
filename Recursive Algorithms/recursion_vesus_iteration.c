@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//Recursive Function
 void recuriveLoop(int array[], int num, int array_length){
     printf("%d\n", array[num]);
 
