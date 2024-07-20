@@ -6,6 +6,7 @@ struct Node{
     struct Node *link;
 };
 
+//Counting nodes
 void count_nodes(struct Node * head){
     int count = 0;
     if(head == NULL){
@@ -20,6 +21,8 @@ void count_nodes(struct Node * head){
     }
     printf("%d\n", count);
 }
+
+//Displaying data of linked list 
 void print_data(struct Node *head){
     if (head == NULL){
         printf("Empty List\n");
