@@ -6,51 +6,66 @@ struct Node{
     struct Node *link;
 };
 
-//Counting nodes
-void count_nodes(struct Node * head){
+void count_Nodes(struct Node *head){
     int count = 0;
-    if(head == NULL){
-        printf("Empty List\n");
+    if (head == NULL){
+        printf("List is empty");
     }
     struct Node *ptr = NULL;
     ptr = head;
 
-    while(ptr != NULL){
+    while (ptr != NULL){
         count++;
         ptr = ptr->link;
     }
-    printf("%d\n", count);
+    printf("sum = %d\n", count);
 }
-
-//Displaying data of linked list 
 void print_data(struct Node *head){
     if (head == NULL){
-        printf("Empty List\n");
+        printf("List is Empty\n");
     }
     struct Node *ptr = NULL;
     ptr = head;
+    
+    int count = 0;
     while (ptr != NULL){
-        printf("%d\n", ptr->data);
+        printf("%d Node = %d\n",count , ptr->data);
         ptr = ptr->link;
+        ++count;
     }
 }
-int main(int argc, char * argv[])
+void insert_end_node(struct Node *head, int data){
+    struct Node *temp = (struct Node*) malloc(sizeof(struct Node));
+    temp->data = data;
+    temp->link = NULL;
+    
+    struct Node *ptr = NULL;
+    ptr = head;
+
+    while(ptr->link != NULL){
+        ptr = ptr->link;
+    }
+    ptr->link = temp;
+}
+int main(int argc, char * argv[])  
 {
-    struct Node * head = (struct Node *) malloc(sizeof(struct Node));
-    head->data = 45;
+    struct Node * head = (struct Node*) malloc(sizeof(struct Node));
+    head->data = 10;
     head->link = NULL;
 
-    struct Node * current = (struct Node*) malloc(sizeof(struct Node));
-    current->data = 98;
+    struct Node * current  = (struct Node*) malloc(sizeof(struct Node));
+    current->data = head->data + 10;
     current->link = NULL;
     head->link = current;
-    
-    current = (struct Node *)malloc(sizeof(struct Node));
-    current->data = 3;
+
+    current = (struct Node*) malloc(sizeof (struct Node));
+    current->data = head->link->data + 10;
     current->link = NULL;
     head->link->link = current;
     
-    count_nodes(head);
+    insert_end_node(head, 34);
+    count_Nodes(head);
     print_data(head);
+
 
 }
